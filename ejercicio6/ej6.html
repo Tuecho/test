@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 6 - DOM básico</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <div id ="content1">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis
+        enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+        commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+        vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+        aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+        elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+        rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+        odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum
+        dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+      </p>
+      
+    </div>
+    <a href="#" id="toggle1" onclick="toggleText('content1', 'toggle1')">Ocultar contenidos</a>  
+    <br />
+    <div id = "content2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis
+        enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+        commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+        vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+        aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+        elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+        rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+        odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum
+        dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+      </p>
+      
+    </div>
+    <a href="#" id="toggle2" onclick="toggleText('content2', 'toggle2')">Ocultar contenidos</a>
+    <br />
+    <div id ="content3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis
+        enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+        commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+        vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+        aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+        elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+        rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+        odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum
+        dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+      </p>
+      
+      
+    </div>
+    <a href="#" id="toggle3" onclick="toggleText('content3', 'toggle3')">Ocultar contenidos</a>
+    <script type="text/javascript" src="main.js"></script>
+    <br><br><br><style>
+      /* Estilo del botón */
+      .boton-regreso {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: white;
+          background-color: #3498db;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      /* Efecto hover */
+      .boton-regreso:hover {
+          background-color: #2980b9;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Botón que redirige a index.html -->
+  <a href="../index.html" class="boton-regreso">Volver al Inicio</a>
+  </body>
+</html>

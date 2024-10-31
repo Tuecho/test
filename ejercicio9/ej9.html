@@ -1,0 +1,63 @@
+<!-- Por alguna extraña razón el gato no se ve en firefox pero sí en chrome por ejemplo-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ej 9: Cat Walk</title>
+  </head>
+  <body>
+    <img
+      id="myCat"
+      style="position: absolute; left: 0px"
+      src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+    />
+<script>
+  const cat = document.getElementById("myCat");
+  let direction = 1; // multiplicamos en positivo o en negativo para mover el gato
+
+  function CatWalk() {
+      // Mover el gato según la dirección
+      cat.style.left = (parseInt(cat.style.left) + (10 * direction)) + "px";
+
+      const distanceWalked = parseInt(cat.style.left);
+      const windowWidth = window.innerWidth;
+
+      // Cambiar dirección si alcanza el borde
+      if (distanceWalked > windowWidth || distanceWalked < 0) {
+          direction *= -1; // Cambiar dirección
+      }
+  }
+  window.setInterval(CatWalk, 50);
+  </script>
+
+<style>
+  /* Estilo del botón */
+  .boton-regreso {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #3498db;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+  }
+
+  /* Efecto hover */
+  .boton-regreso:hover {
+      background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+
+<!-- Botón que redirige a index.html -->
+<a href="../index.html" class="boton-regreso">Volver al Inicio</a>
+  </body>
+</html>
+      

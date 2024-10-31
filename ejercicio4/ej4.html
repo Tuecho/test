@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 4 - DOM básico</title>
+    <link rel="stylesheet" href="ej4.css" />
+  </head>
+
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+      vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+      commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+      vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+      aliquam vitae, ultrices porttitor, pede.
+      <!-- Inicio texto a mostrar/esconder -->
+      <span id="myText" class="additional hidden">
+        Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna
+        sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis
+        eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante
+        quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae,
+        venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam
+        ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer
+        lacus. Vestibulum venenatis erat eu odio. Praesent id metus. Nullam sit
+        amet nisl elementum elit convallis malesuada. Phasellus magna sem,
+        semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu
+        adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam
+        non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae,
+        venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam
+        ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer
+        lacus. Vestibulum venenatis erat eu odio. Praesent id metus.
+      </span>
+      <!-- Fin texto a mostrar/esconder -->
+    </p>
+    <a href="#" id="toggle" onclick="toggleText();">Seguir leyendo</a><br><br><br>
+    <script type="text/javascript" src="main.js"></script>
+    
+    <style>
+      /* Estilo del botón */
+      .boton-regreso {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: white;
+          background-color: #3498db;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      /* Efecto hover */
+      .boton-regreso:hover {
+          background-color: #2980b9;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Botón que redirige a index.html -->
+  <a href="../index.html" class="boton-regreso">Volver al Inicio</a>
+    
+  </body>
+</html>

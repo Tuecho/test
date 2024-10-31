@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en el eje horizontal */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Añade espacio debajo del título */
+    font-size: 2.5em; /* Aumenta el tamaño del texto del título */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Asegura que la lista use el ancho completo */
+    max-width: 600px; /* Limita el ancho máximo de la lista */
+}
+
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s; /* Añade transición suave */
+    display: flex; /* Utiliza Flexbox para centrar el texto */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 50px; /* Altura del elemento li para centrar mejor el texto */
+}
+
+li:hover {
+    background: #e0f7fa; /* Cambia el color de fondo al hacer hover */
+    transform: translateY(-3px); /* Mueve el elemento ligeramente hacia arriba */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold; /* Hace el texto del enlace más grueso */
+    display: block; /* Hace que el enlace ocupe todo el área del li */
+    width: 100%; /* Ocupa todo el ancho del li */
+    text-align: center; /* Centra el texto dentro del enlace */
+}
+
+a:hover {
+    color: #0056b3; /* Cambia el color del texto del enlace al hacer hover */
+    text-decoration: underline; /* Subraya el texto al hacer hover */
+}

@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center; /* Centra el gráfico horizontalmente */
+    align-items: center;     /* Centra el gráfico verticalmente */
+    height: 100vh;           /* Altura completa de la ventana */
+    margin: 0;               /* Elimina márgenes */
+}
+canvas {
+    border: 1px solid black; /* Borde para visualizar el área del gráfico */
+    width: 200px;            /* Ancho deseado */
+    height: 200px;           /* Altura deseada */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button.reset {
+    background-color: white; /* Fondo blanco */
+    color: red; /* Texto rojo */
+    border: 2px solid red; /* Borde rojo */
+}
+
+button.reset:hover {
+    background-color: red; /* Cambia el fondo a rojo al pasar el ratón */
+    color: white; /* Cambia el texto a blanco al pasar el ratón */
+}
+/* Estilos para la disposición de los botones */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 10px; /* Espacio entre botones */
+    margin-bottom: 20px; /* Espacio entre los botones y el gráfico */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white; /* Color de fondo */
+    color: blue; /* Color del texto */
+    border: 2px solid blue; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el ratón */
+    color: white;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    width: 50%; /* Ancho del contenedor */
+    margin: auto; /* Centrar el contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+.chart-container {
+    width: 100%;
+    height: 20%;
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px; /* Espacio superior para el gráfico */
+    
+
+}
+
+

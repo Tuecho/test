@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 8 - Votaciones en gráfico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Votaciones</h1>
+      <style>
+        /* Estilo del botón */
+        .boton-regreso {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+  
+        /* Efecto hover */
+        .boton-regreso:hover {
+            background-color: #2980b9;
+        }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Botón que redirige a index.html -->
+    <a href="../index.html" class="boton-regreso">Volver al Inicio</a><br><br>
+      <div class="button-container">
+          <button type="button" onclick="vote(0)">Socialistas</button>
+          <button type="button" onclick="vote(1)">Liberales</button>
+          <button type="button" onclick="vote(2)">Animalistas</button>
+          <button type="button" onclick="vote(3)">Centristas</button>
+          <button type="button" onclick="vote(4)">Ecologistas</button>
+          <button type="button" class="reset" onclick="resetVotes()">Reset</button> <!-- Clase añadida -->
+      </div>
+      <div class="chart-container">
+        <canvas id="myChart"></canvas> 
+    </div>
+  </div>
+    
+    <script>
+      const ctx = document.getElementById('myChart');
+      
+      // Inicializar el array de votos
+      let votes = [0, 0, 0, 0, 0];
+      
+      // Crear el gráfico
+      const myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Socialistas', 'Liberales', 'Animalistas', 'Centristas', 'Ecologistas'],
+          datasets: [{
+            label: '# of Votes',
+            data: votes,
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Resultados de Votaciones'
+            }
+          }
+        }
+      });
+
+      // Función para incrementar los votos
+      function vote(index) {
+        votes[index]++; // Incrementar el voto para el partido correspondiente
+        myChart.update(); // Actualizar el gráfico
+      }
+
+      function resetVotes() {
+        votes = [0, 0, 0, 0, 0]; // Resetear el array de votos
+        myChart.data.datasets[0].data = votes; // Actualizar los datos en el gráfico
+        myChart.update(); // Actualizar el gráfico
+      }
+    </script>
+    <!-- <br><br><br><a href="../index.html">Volver</a> -->
+   
+  </body>
+ 
+</html>

@@ -1,0 +1,32 @@
+/* Style general */
+div[id^="content"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Styles para el contenido */
+  div[id^="content"] p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Styles para link ocultar/mostrar */
+  a[id^="toggle"] {
+    display: inline-block;
+    margin-top: 8px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  a[id^="toggle"]:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
